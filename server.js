@@ -40,6 +40,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'GitHub Projects',
+    welcomeMessage: 'GitHub\'s currently in progress projects'
+  });
+});
+
 var errorMessage = {
   errorCode: 404,
   description: 'Route not found!'
